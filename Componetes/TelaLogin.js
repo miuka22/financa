@@ -6,45 +6,47 @@ export default function LoginScreen({navigation}) {
   const [password, setPassword] = useState('');
 
   return (
-    <View style={styles.container}>
-    <View style={styles.teste}>
-      <Text style={styles.logo}>MONEY MIND</Text>
-    </View>
-    <View style={styles.formulario}>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputText}
-          placeholder="E-mail"
-          placeholderTextColor="#6A6D6D"
-          onChangeText={text => setEmail(text)}
-          
-        />
+    <View style={styles.nada}>
+      <View style={styles.nada}>
+        <Text style={styles.nada}>MONEY MIND</Text>
       </View>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputText}
-          placeholder="Senha"
-          placeholderTextColor="#6A6D6D"
-          secureTextEntry={true}
-          onChangeText={text => setPassword(text)}
-        />
+      <View style={styles.nada}>
+        <View style={styles.nada}>
+          <TextInput
+            style={styles.nada}
+            placeholder="E-mail"
+            placeholderTextColor="#6A6D6D"
+            onChangeText={text => setEmail(text)}
+          />
+        </View>
+        <View style={styles.nada}>
+          <TextInput
+            style={styles.nada}
+            placeholder="Senha"
+            placeholderTextColor="#6A6D6D"
+            secureTextEntry={true}
+            onChangeText={text => setPassword(text)}
+          />
+        </View>
+        <TouchableOpacity onPress={()=>navigation.navigate('Esqueceu')}>
+          <Text style={styles.nada}>Esqueceu a senha?</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text style={styles.nada}>LOGIN</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Cadastro')}>
+          <Text style={styles.nada}>Criar uma nova conta</Text>
+        </TouchableOpacity>
+
       </View>
-      <TouchableOpacity onPress={()=>navigation.navigate('Esqueceu')}>
-        <Text style={styles.senha}>Esqueceu a senha?</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>LOGIN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={()=>navigation.navigate('Cadastro')}>
-        <Text style={styles.criarText}>Criar uma nova conta</Text>
-      </TouchableOpacity>
-      
-    </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  nada:{
+
+  },
   //teste: {
     //position: 'relative',
     //top: 150,
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  container: {
+  fundo: {
     flex: 1,
     background: '#ffffff',
     alignItems: 'center',
@@ -66,15 +68,14 @@ const styles = StyleSheet.create({
     fontSize: 32,
     justifyContent:'center'
   },
-inputView:{
+  inputView:{
     padding:5,
   },
-inputText: {
+  inputText: {
+  backgroundColor: '#ffff00',
     //outlineStyle: 'none',
     width:300,
     height:43,
-    left: 24,
-    top:316,
     background:'#d9d9d9',
     borderRadius: 16,
     padding:9,
