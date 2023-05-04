@@ -16,7 +16,10 @@ export default function LoginScreen({navigation}) {
           style={styles.inputText}
           placeholder="E-mail"
           placeholderTextColor="#6A6D6D"
-          onChangeText={text => setEmail(text)}
+          onChangeText={text => setEmail(text)
+          ///placeholder="Senha"
+          }
+
           
         />
       </View>
